@@ -1,1 +1,5 @@
-tedka to cele prepisu
+Tady máme nějaký text.
+
+Druhá lajna.
+
+Třetí lajna!
