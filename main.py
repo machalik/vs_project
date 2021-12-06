@@ -15,7 +15,6 @@ znaky = {
         '0': '-----'
 }
 
-
 def encodovani(vstup):
     vstup = vstup.upper()
     zprava = ''
@@ -25,9 +24,6 @@ def encodovani(vstup):
         else:
             zprava += ' '
     return zprava
-
-
-
 
 def decodovani(vstup):
     try:
