@@ -4,3 +4,4 @@ def test_encodovani():
 
 def test_decodovani():
     assert True
+
