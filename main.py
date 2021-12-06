@@ -15,30 +15,21 @@ znaky = {
         '0': '-----'
 }
 
+
 def encodovani(vstup):
-    """
-    Encode.
-    Args vstup.
-    >>> encodovani('a')
-    .-
-    """
+    vstup = vstup.upper()
     zprava = ''
-    i = 0
-    for znak in vstup.upper():
+    for znak in vstup:
         if znak != ' ':
             zprava += znaky[znak]
-            if len(vstup)-1 != i:
-                zprava+= ' '
-        i += 1
+        else:
+            zprava += ' '
     return zprava
 
+
+
+
 def decodovani(vstup):
-    """
-    Decode.
-    Args vstup.
-    >>> decodovani('.-')
-    A
-    """
     try:
         vstup += " "
         desifrovanaZprava = ''
@@ -60,9 +51,6 @@ def decodovani(vstup):
         return 0
 
 def vypisZnaku():
-    """
-    Print approved string of chars in array.
-    """
     znakPodporovan=""
     vypisZnaku=""
     for znakPodporovan in znaky:
@@ -71,9 +59,6 @@ def vypisZnaku():
     print(vypisZnaku)
 
 def start():
-    """
-    Main console function.
-    """
     print("Zvolte: 'e' pro encode, 'd' pro decode, jinou klávesu pro ukončení programu:")
     print("Podporované znaky:")
     vypisZnaku()
@@ -98,7 +83,10 @@ def start():
             print("Chyba - Nelze dekódovat.")
             start()
 
-print("Vítejte v encoderu/decoderu pro morseovku")
-start()
+def main():
+    print("Vítejte v encoderu/decoderu pro morseovku")
+    start()
 
 
+if __name__ == '__main__':
+    main()
