@@ -1,4 +1,5 @@
 znaky = {
+        """Morse Script."""
         'A': '.-', 'B': '-...',
         'C': '-.-.', 'D': '-..', 'E': '.',
         'F': '..-.', 'G': '--.', 'H': '....',
@@ -15,6 +16,12 @@ znaky = {
 }
 
 def encodovani(vstup):
+    """
+    Encode.
+    Args vstup.
+    >>> encodovani('a')
+    .-
+    """
     zprava = ''
     i = 0
     for znak in vstup.upper():
@@ -26,6 +33,12 @@ def encodovani(vstup):
     return zprava
 
 def decodovani(vstup):
+    """
+    Decode.
+    Args vstup.
+    >>> decodovani('.-')
+    A
+    """
     try:
         vstup += " "
         desifrovanaZprava = ''
@@ -47,6 +60,9 @@ def decodovani(vstup):
         return 0
 
 def vypisZnaku():
+    """
+    Print approved string of chars in array.
+    """
     znakPodporovan=""
     vypisZnaku=""
     for znakPodporovan in znaky:
@@ -55,6 +71,9 @@ def vypisZnaku():
     print(vypisZnaku)
 
 def start():
+    """
+    Main console function.
+    """
     print("Zvolte: 'e' pro encode, 'd' pro decode, jinou klávesu pro ukončení programu:")
     print("Podporované znaky:")
     vypisZnaku()
@@ -81,3 +100,5 @@ def start():
 
 print("Vítejte v encoderu/decoderu pro morseovku")
 start()
+
+
